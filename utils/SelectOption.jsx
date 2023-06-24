@@ -1,0 +1,22 @@
+export const Option_Value = [
+    {
+       title:"Saved",
+       value:"Saved"
+    },
+    {
+       title:"Applied",
+       value:"Applied"
+    },
+    {
+       title:"Interviewing",
+       value:"Interviewing"
+    },
+    {
+       title:"Offer",
+       value:"Offer"
+    },
+    {
+       title:"Rejected",
+       value:"Rejected"
+    },
+ ]
