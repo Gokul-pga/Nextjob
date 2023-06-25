@@ -2,13 +2,13 @@
 
 import React from "react";
 import { useRouter } from "next/router";
-import SuggestLogo from "@/assests/suggestLogo";
-import ReportLogo from "@/assests/reportLogo";
 import MenuItem from "./MenuItems";
 import LoopLogo from "@/assests/LoopLogo";
 import BoardsLogo from "@/assests/BoardsLogo";
 import NetworkingLogo from "@/assests/NetworkingLogo";
 import ArchivedJobLogo from "@/assests/ArchivedJobLogo";
+import SuggestLogo from "@/assests/SuggestLogo";
+import ReportLogo from "@/assests/ReportLogo";
 
 export default function SideBar() {
    const location = useRouter().pathname;

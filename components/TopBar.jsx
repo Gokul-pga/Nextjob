@@ -1,10 +1,10 @@
 /** @format */
 
 import React from "react";
-import NextJobLogo from "../assests/nextJobLogo";
 import NavDropdown from "./NavDropdown";
 import BellLogo from "../assests/BellLogo";
 import AvatarComponent from "./AvatarComp";
+import NextJobLogo from "@/assests/NextJobLogo";
 
 export default function TopBar() {
    const OPTIONS = [
