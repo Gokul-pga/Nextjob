@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
-import Img_source from '../img_source';
 import PencilIcon from "../../assests/PencilIcon.png"
+import Img_source from '../Img_source';
 
 
 export default function UiUxCompanyPage() {
