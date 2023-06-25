@@ -1,5 +1,13 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { cookies } from "next/headers";
 
-export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+export const runtime = "edge";
+
+export async function GET(request) {
+  const cookieStore = cookies();
+  const token = cookieStore.get("token");
+
+  return new Response("Hello, Next.js!", {
+    status: 200,
+    headers: { "Set-Cookie": `token=${token}` },
+  });
 }

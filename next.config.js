@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+  output: "export",
+  runtime: "edge",
+  unstable_allowDynamic: "/lib/utilities.js",
+};
 
-module.exports = nextConfig
+module.exports = {
+  images: {
+    unoptimized: true,
+  },
+  nextConfig,
+};
