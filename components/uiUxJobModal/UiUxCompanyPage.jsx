@@ -1,8 +1,5 @@
 import React from 'react'
-import { Pencil1Icon } from "@radix-ui/react-icons";
-import UIUXSidebar from '../UIUXSidebar';
 import Image from 'next/image';
-import UiUxModalBox from '@/components/UiUxModalBox';
 import Img_source from '../img_source';
 import PencilIcon from "../../assests/PencilIcon.png"
 
