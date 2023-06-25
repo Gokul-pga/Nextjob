@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import HouseIcon from "@/assests/HouseIcon";
 import Location from "@/assests/Location.png";
@@ -6,8 +6,14 @@ import DolarSymbol from "@/assests/DolarSymbol.png";
 import Button from "./Button";
 import MenuItem from "./MenuItems";
 import UIUXSidebar from "./UIUXSidebar";
+import SelectInput from "./SelectInput";
+import { OPTION } from "./AddJobModal";
 
 export default function UiUxTopBar() {
+  const [inputValue, setInputValue] = useState({
+    type:'',
+  })
+  const {type} = inputValue;
 
     const Array_Topbar = [
         {
@@ -88,7 +94,7 @@ export default function UiUxTopBar() {
 
         <div className="gap-2 flex flex-row h-fit">
             <Button name={"Delete"} customClass={"bg-red-500 px-9 py-1 rounded-md text-white font-medium "}/>
-            <Button name={"Saved"} customClass={"bg-white px-9 py-1 rounded-md border-2 bg-grey-100"}/>
+            <SelectInput options={OPTION} onChange={(e) =>{setInputValue({...inputValue,type:e})}} customClass={"bg-white px-9 py-1 rounded-md text-black font-medium "}/>
         </div>
       </div>
 

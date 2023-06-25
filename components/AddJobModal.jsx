@@ -4,15 +4,44 @@ import { Dialog, Transition } from "@headlessui/react";
 import Input from './Input';
 import Button from './Button';
 import { InfoCircledIcon } from "@radix-ui/react-icons";
+import SelectInput from './SelectInput';
 
+export const OPTION = [{
+   title:"Select",
+   id:'0',
+   value:"Select"
+},
+{
+   title:"Applied",
+   id:'1',
+   value:"Applied"
+},
+{
+   title:"Saved",
+   id:'2',
+   value:"Saved"
+},
+{
+   title:"Interviewing",
+   id:'3',
+   value:"Interviewing"
+},
+{
+   title:"Offer",
+   id:'4',
+   value:"Offer"
+},
+] 
 export default function AddJobModal({open,setOpen}) {
+
    
    const [inputValue, setInputValue] = useState({
       company:'',
       title:'',
-      url:''
+      url:'',
+      type:'',
    })
-   const {company,title,url} = inputValue;
+   const {company,title,url,type} = inputValue;
     const cancelButtonRef = useRef(null);
   return (
     <Transition.Root
@@ -66,7 +95,7 @@ export default function AddJobModal({open,setOpen}) {
             <Input placeholder="Company name" value={company} onChange={(e) =>{setInputValue({...inputValue,company:e.target.value})}}/>
             <Input placeholder="Job Title" value={title} onChange={(e) =>{setInputValue({...inputValue,title:e.target.value})}}/>
             <Input placeholder="Job URL" value={url} onChange={(e) =>{setInputValue({...inputValue,url:e.target.value})}}/>
-             
+             <SelectInput options={OPTION} onChange={(e) =>{setInputValue({...inputValue,type:e})}}/>
          </form>
                    </div>
                    <div className="bg-gray-50  px-3 py-3 flex sm:flex justify-center gap-2 sm:px-6">
