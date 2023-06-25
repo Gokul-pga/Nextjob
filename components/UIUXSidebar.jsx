@@ -1,12 +1,6 @@
-import React, { Children, useState } from 'react'
-import NetworkingLogo from "@/assests/NetworkingLogo";
+import React, { useState } from 'react'
 import Image from 'next/image';
 import MenuItem from './MenuItems';
-import { useRouter } from 'next/router';
-import WindowLogo from "../assests/WindowLogo.png"
-import HouseLogo from "../assests/HouseLogo.png"
-import NotesCardLogo from "../assests/NotesCardBox.png"
-import Img_source from './img_source';
 import UiUxJobDescPg from './uiUxJobModal/UiUxJobDescPg';
 import UiUxCompanyPage from './uiUxJobModal/UiUxCompanyPage';
 import UiUxNotesPage from './uiUxJobModal/UiUxNotesPage';
